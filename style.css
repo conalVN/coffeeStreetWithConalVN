@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --bg-color: #F6EBDA;
+    --bg-sub-color: #F9D9AA;
+    --text-color: #2F2105;
+    --sub-text-color: #FF902A;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+html::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    line-height: 1.5;
+    font-family: 'Poppins', sans-serif;
+    /* font-size: 62.5%; */
+}
+
+/* frame */
+
+
+
+/* ******************* */
+.app {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+header {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    padding-top: 1rem;
+}
+.logo {
+    display: block;
+    width: 250px;
+    height: 50px;
+    background-image: url(./source/images/logo_coffe.svg);
+    background-position: center;
+    background-size: cover;
+}
+.icon {
+    /* width: 50px;
+    height: 50px; */
+    padding: 1rem;
+    margin-left: 0.7rem;
+}
+.cart {
+    display: inline-block;
+    width: 24px;
+    height: 22px;
+    background-image: url(./source/images/cart.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.menu {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.menu-item {
+    margin: 0 2rem;
+}
+.menu-link {
+    display: block;
+    text-decoration: none;
+    color: var(--text-color);
+}
+.menu-link:hover {
+    color: var(--sub-text-color);
+}
+.menu-link.active {
+    color: var(--sub-text-color);
+}
+.group {
+    display: flex;
+    align-items: center;
+}
+.input-group {
+    background-color: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+}
+.form-control {
+    border: none;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+
+/* Home */
+.home {
+    padding-top: 8%;
+    min-height: 100vh;
+}
+.home__left {
+    padding-top: 4rem;
+}
+.home__left-title {
+    font-weight: 600;
+    line-height: 1.5;
+}
+.home__left-title>b {
+    color: var(--sub-text-color);
+}
+.home__left p {
+    color: #666;
+    margin: 2rem auto;
+}
+.btn.btn-p {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 24px;
+    color: #fff;
+    background-color: var(--text-color);
+}
+.btn.btn-p>.icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 20px;
+    background-color: var(--sub-text-color);
+}
+.btn.btn-t {
+    font-weight: 600;
+    color: var(--sub-text-color);
+}
+.home__right {
+    position: relative;
+}
+.home__right-img {
+    position: absolute;
+    left: 10%;
+    width: 415px;
+    height: 415px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./source/images/Ellipse.svg);
+}
+.home__right-img::before {
+    content: "";
+    position: absolute;
+    left: 10%;
+    width: 350px;
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./source/images/cofe.png);
+}
+.home__right-img::after {
+    content: "";
+    position: absolute;
+    left: 6%;
+    top: 20%;
+    width: 435px;
+    height: 250px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(./source/images/Exclude.svg);
+}
+.text {
+    position: absolute;
+    display: inline-block;
+    width: max-content;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--text-color);
+    background-color: #fff;
+    text-align: center;
+    padding: 8px 40px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+.text.one {
+    top: 40px;
+}
+.text.two {
+    right: 30px;
+    top: 140px;
+}
+.text.three {
+    top: 330px;
+    left: 50px;
+}
+
+/* popular */
+.popular {
+    width: 100%;
+    height: 200px;
+    padding-top: 5%;
+    color:var(--text-color);
+    background-color: var(--bg-color);
+}
+.popular-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.popular-heading {
+    position: absolute;
+    top: -100%;
+}
+.popular-heading span {
+    border-bottom: 3px solid var(--sub-text-color);
+}
+.popular-bg {
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    height: 300px;
+    background-color: var(--bg-sub-color);
+    border-radius: 64px;
+}
+.popular-bg>div {
+    margin: 0;
+    padding-left: 6px;
+}
+.drink,
+.cake {
+    position: absolute;
+    top: -50%;
+    width: 340px;
+    height: auto;
+    padding: 24px 18px;
+    border-radius: 12px;
+    background-color: #fff;
+    filter: drop-shadow(0px 6px 16px rgba(0, 0, 0, 0.16));
+}
+.drink-img {
+    width: 100%;
+    height: 226px;
+    border-radius: 12px;
+    background-image: url(./source/images/cofe1.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.drink-body {
+    padding: 12px 12px 0;
+}
+.drink-header,
+.drink-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.drink-name {
+    font-weight: 600;
+}
+.drink-option {
+    display: inline-block;
+    text-align: center;
+    font-size: .8rem;
+    min-width: 64px;
+    padding: 10px;
+    border-radius: 8px;
+    color: rgba(255, 144, 42, .6);
+    border: 1px solid rgba(255, 144, 42, .6);
+}
+.drink-option.active {
+    color: var(--sub-text-color);
+    border: 1px solid var(--sub-text-color);
+}
+.drink-footer>.icon {
+    padding: 0;
+    text-align: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 30px;
+    background-color: var(--sub-text-color);
+}
+.drink-footer>.icon span {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(./source/images/cartSmall.svg);
+}
+
+/* service */
+.service {
+    margin: 30% auto 10%;
+    color: var(--text-color);
+}
+.service-heading span {
+    border-bottom: 3px solid var(--sub-text-color);
+}
+.service-box {
+    text-align: center;
+}
+.service-image {
+    margin: 0 auto;
+    width: 160px;
+    height: 160px;
+    background-image: url(./source/images/img.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.service-title {
+    font-weight: 600;
+}
+
+/* about */
+.about {
+    position: relative;
+    width: 100%;
+    min-height: 60vh;
+    color: var(--text-color);
+}
+.about-image {
+    position: absolute;
+    top: -20%;
+    left: 10%;
+    width: 300px;
+    height: 400px;
+    border-radius: 12px;
+    background-image: url(./source/images/img4.png);
+    background-position: center;
+    background-size: cover;
+
+}
+.about-content {
+    margin: 3rem 0;
+    margin-left: 10%;
+}
+.about-content h3 span {
+    border-bottom: 3px solid var(--sub-text-color);
+}
+.about-content h3,
+.about-title {
+    font-weight: 600;
+    margin: 2rem 0;
+}
+.about-text {
+    color: #888;
+}
+.about-content > .btn {
+    color: var(--sub-text-color);
+}
